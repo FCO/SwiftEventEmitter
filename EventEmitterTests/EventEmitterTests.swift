@@ -10,6 +10,8 @@ import XCTest
 @testable import EventEmitter
 
 class EventEmitterTests: XCTestCase {
+    let eventEmitter = EventEmitter()
+    var shouldExists : Bool = true
     
     override func setUp() {
         super.setUp()
@@ -24,6 +26,35 @@ class EventEmitterTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let expectation = expectationWithDescription("Events")
+        eventEmitter.on("event1") {
+            (data : Bool) in
+            XCTAssertTrue(data)
+            self.eventEmitter.emit("event1", data: 42)
+        }
+        eventEmitter.on("event1") {
+            (data : Int) in
+            XCTAssertEqual(data, 42)
+            self.eventEmitter.emit("event1", data: "bla")
+        }
+        eventEmitter.once("event1") {
+            (data : String) in
+            if self.shouldExists {
+                XCTAssertEqual(data, "bla")
+                expectation.fulfill()
+                self.eventEmitter.emit("event1", data: "ble")
+                self.shouldExists = false
+            } else {
+                XCTFail("Once should run only once")
+            }
+        }
+        eventEmitter.emit("event1", data: true)
+
+        waitForExpectationsWithTimeout(10) {error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     func testPerformanceExample() {

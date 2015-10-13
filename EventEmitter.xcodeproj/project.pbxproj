@@ -10,6 +10,7 @@
 		EDF6EB581BCC29DD00424B30 /* EventEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF6EB571BCC29DD00424B30 /* EventEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDF6EB5F1BCC29DE00424B30 /* EventEmitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF6EB541BCC29DD00424B30 /* EventEmitter.framework */; settings = {ASSET_TAGS = (); }; };
 		EDF6EB641BCC29DE00424B30 /* EventEmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6EB631BCC29DE00424B30 /* EventEmitterTests.swift */; };
+		EDF6EB6F1BCC29F800424B30 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6EB6E1BCC29F800424B30 /* EventEmitter.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,8 @@
 		EDF6EB5E1BCC29DE00424B30 /* EventEmitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventEmitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF6EB631BCC29DE00424B30 /* EventEmitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitterTests.swift; sourceTree = "<group>"; };
 		EDF6EB651BCC29DE00424B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF6EB6E1BCC29F800424B30 /* EventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
+		EDF6EB701BCCA5C300424B30 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 				EDF6EB561BCC29DD00424B30 /* EventEmitter */,
 				EDF6EB621BCC29DE00424B30 /* EventEmitterTests */,
 				EDF6EB551BCC29DD00424B30 /* Products */,
+				EDF6EB701BCCA5C300424B30 /* MyPlayground.playground */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +77,7 @@
 			children = (
 				EDF6EB571BCC29DD00424B30 /* EventEmitter.h */,
 				EDF6EB591BCC29DD00424B30 /* Info.plist */,
+				EDF6EB6E1BCC29F800424B30 /* EventEmitter.swift */,
 			);
 			path = EventEmitter;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 		EDF6EB4B1BCC29DD00424B30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = FCO;
 				TargetAttributes = {
@@ -193,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF6EB6F1BCC29F800424B30 /* EventEmitter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +314,7 @@
 		EDF6EB691BCC29DE00424B30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +325,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FCO.EventEmitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		EDF6EB6A1BCC29DE00424B30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
