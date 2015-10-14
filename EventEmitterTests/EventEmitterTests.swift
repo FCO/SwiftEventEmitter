@@ -42,7 +42,7 @@ class EventEmitterTests: XCTestCase {
             if self.shouldExists {
                 XCTAssertEqual(data, "bla")
                 expectation.fulfill()
-                self.eventEmitter.emit("event1", data: "ble")
+                self.eventEmitter.emit("event1", data: "ble ")
                 self.shouldExists = false
             } else {
                 XCTFail("Once should run only once")
