@@ -12,7 +12,7 @@ public class EventEmitter {
     private var listeners : [String:[String:[(Any) -> Void]]] = [:]
     private var onceListeners : [String:[String:[(Any) -> Void]]] = [:]
     
-    func on<T>(event: String, cb: (T) -> Void) -> EventEmitter {
+    public func on<T>(event: String, cb: (T) -> Void) -> EventEmitter {
         if listeners[event] == nil {
             listeners[event] = [String(T.self):[]]
         }
@@ -20,7 +20,7 @@ public class EventEmitter {
         return self
     }
     
-    func once<T>(event: String, cb: (T) -> Void) -> EventEmitter {
+    public func once<T>(event: String, cb: (T) -> Void) -> EventEmitter {
         if onceListeners[event] == nil {
             onceListeners[event] = [String(T.self):[]]
         }
@@ -29,7 +29,7 @@ public class EventEmitter {
     }
     
     private func addListener<T>(inout list : [String:[(Any) -> Void]], cb: (T) -> Void) {
-
+        
         if list[String(T.self)] == nil {
             list[String(T.self)] = []
         }
@@ -47,11 +47,12 @@ public class EventEmitter {
     }
     */
     
-    func emit(event: String) {
+    public func emit(event: String) {
         emit(event, data: ())
     }
     
-    func emit<T>(event: String, data: T) {
+    public func emit<T>(event: String, data: T) {
+        print("emit \(event): \(data)")
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
             var funcs : [(Any) -> Void] = []
             if self.listeners[event]?[String(T.self)]?.count > 0 {

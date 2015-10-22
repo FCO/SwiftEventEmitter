@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED6323701BD8895A00390E86 /* EventEmitter.swift in Resources */ = {isa = PBXBuildFile; fileRef = EDF6EB6E1BCC29F800424B30 /* EventEmitter.swift */; };
 		EDF6EB581BCC29DD00424B30 /* EventEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF6EB571BCC29DD00424B30 /* EventEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDF6EB5F1BCC29DE00424B30 /* EventEmitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF6EB541BCC29DD00424B30 /* EventEmitter.framework */; settings = {ASSET_TAGS = (); }; };
 		EDF6EB641BCC29DE00424B30 /* EventEmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6EB631BCC29DE00424B30 /* EventEmitterTests.swift */; };
@@ -182,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6323701BD8895A00390E86 /* EventEmitter.swift in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +387,7 @@
 				EDF6EB6A1BCC29DE00424B30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDF6EB6B1BCC29DE00424B30 /* Build configuration list for PBXNativeTarget "EventEmitterTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +396,7 @@
 				EDF6EB6D1BCC29DE00424B30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
