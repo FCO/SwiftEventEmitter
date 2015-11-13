@@ -12,6 +12,9 @@ public class EventEmitter {
     private var listeners : [String:[String:[Any]]] = [:]
     private var onceListeners : [String:[String:[Any]]] = [:]
     
+    public init() {
+    }
+    
     public func on<T>(event: String, cb: (T) -> Void) -> EventEmitter {
         if listeners[event] == nil {
             listeners[event] = [String(T.self):[]]

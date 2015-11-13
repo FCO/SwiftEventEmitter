@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		ED6323701BD8895A00390E86 /* EventEmitter.swift in Resources */ = {isa = PBXBuildFile; fileRef = EDF6EB6E1BCC29F800424B30 /* EventEmitter.swift */; };
 		EDF6EB581BCC29DD00424B30 /* EventEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF6EB571BCC29DD00424B30 /* EventEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDF6EB5F1BCC29DE00424B30 /* EventEmitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF6EB541BCC29DD00424B30 /* EventEmitter.framework */; settings = {ASSET_TAGS = (); }; };
+		EDF6EB5F1BCC29DE00424B30 /* EventEmitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF6EB541BCC29DD00424B30 /* EventEmitter.framework */; };
 		EDF6EB641BCC29DE00424B30 /* EventEmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6EB631BCC29DE00424B30 /* EventEmitterTests.swift */; };
-		EDF6EB6F1BCC29F800424B30 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6EB6E1BCC29F800424B30 /* EventEmitter.swift */; settings = {ASSET_TAGS = (); }; };
+		EDF6EB6F1BCC29F800424B30 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6EB6E1BCC29F800424B30 /* EventEmitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,6 @@
 		EDF6EB631BCC29DE00424B30 /* EventEmitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitterTests.swift; sourceTree = "<group>"; };
 		EDF6EB651BCC29DE00424B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF6EB6E1BCC29F800424B30 /* EventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
-		EDF6EB701BCCA5C300424B30 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +59,6 @@
 				EDF6EB561BCC29DD00424B30 /* EventEmitter */,
 				EDF6EB621BCC29DE00424B30 /* EventEmitterTests */,
 				EDF6EB551BCC29DD00424B30 /* Products */,
-				EDF6EB701BCCA5C300424B30 /* MyPlayground.playground */,
 			);
 			sourceTree = "<group>";
 		};
